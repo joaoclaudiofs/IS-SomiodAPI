@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Notification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ae" type="xs:string"/>
+        <xs:element name="container" type="xs:string"/>
+        <xs:element name="content" type="xs:string"/>
+        <xs:element name="timestamp" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- for compatibility with middleware emulators that use ContentInstance root -->
+  <xs:element name="ContentInstance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="content" type="xs:string"/>
+        <xs:element name="ae" type="xs:string"/>
+        <xs:element name="container" type="xs:string"/>
+        <xs:element name="timestamp" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

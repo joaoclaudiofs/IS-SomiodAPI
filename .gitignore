@@ -1,0 +1,76 @@
+# --- Build Results (ignores bin and obj in all subfolders) ---
+**/[Bb]in/
+**/[Oo]bj/
+**/[Dd]ebug/
+**/[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Ll]og/
+[Ll]ogs/
+
+# --- Additional Build Output Patterns ---
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+# --- Visual Studio Specific ---
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# --- NuGet Packages ---
+# Ignores the packages folder, but allows the config file
+**/packages/*
+!**/packages/build/
+*.nupkg
+*.snupkg
+**/packages.lock.json
+!packages.config
+
+# --- Output Files ---
+# Ignore build outputs if they accidentally end up in root
+*.pdb
+# Note: We usually ignore *.dll, but if 'ModelsLibrary' contains 
+# 3rd party DLLs you strictly want to keep, comment out the next line:
+*.dll
+*.dll.config
+*.exe
+*.out
+*.log
+*.vshost.*
+
+# --- Visual Studio Cache/Options ---
+.vs/
+*.rsuser
+*.userprefs
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# --- Compiled Object files ---
+*.obj
+
+# --- Windows System Files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Web Service Specific (Project folder) ---
+# Ignore user-specific web configurations but keep the main web.config
+*.publishsettings
+
+# --- Database Files ---
+*.mdf
+*.ldf
+
+# --- Exceptions ---
+# If you have a specific lib folder for manual DLLs, un-ignore it here:
+# !Lib/
+/Project/Notifications

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="notificationLog">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sourceFormat">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="application/json"/>
+							<xs:enumeration value="application/xml"/>
+							<xs:enumeration value="application/plaintext"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="evt">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="create"/>
+							<xs:enumeration value="delete"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="content">
+					<xs:complexType mixed="true">
+						<xs:sequence>
+							<xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="timestamp" type="xs:dateTime"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
